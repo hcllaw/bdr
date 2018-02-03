@@ -1,6 +1,7 @@
 # bdr
-NOT IN PRODUCTION YET
 Bayesian Distribution Regression
+
+NOT YET READY FOR USE (will be ready soon). 
 
 To download the data, run `bdr/data/astro/get.sh` and `bdr/data/aerosol/get.sh`.
 The main code, including data, is organized in a package in the [`bdr`](bdr) folder.
