@@ -14,7 +14,9 @@ setup(
         'tensorflow',
         'scipy',
         'tqdm',
-        'glob'
+        'glob',
+#        'matplotlib',
+#        'sealion'
      ],
     description='Code for bayesian approaches to distribution regression.',
     license='MIT'
