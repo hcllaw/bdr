@@ -15,12 +15,6 @@ The directory is organised as follows:
 * __experiment_config__: contains the experimental setup/configurations described in the paper
 * __results__: contains the trained networks of the results described in the paper, and the corresponding plot functions.
 
+There are two main datasets found in this paper, a gamma synthetic data (simulated by [`bdr/data/toy.py`], seed provided in [`experiment_code`])
 
-
-
-bdr	reorganised	15 minutes ago
-experiment_code	reorganised	15 minutes ago
-experiment_config	reorganised	15 minutes ago
-results	moved data	3 hours ago
-src	first commit, still tidying up	2 days ago
-utilities
+The preprocessed IMDB-wiki dataset can be , run bdr/data/astro/get.sh and bdr/data/aerosol/get.sh. The main code, including data, is organized in a package in the bdr folder.
