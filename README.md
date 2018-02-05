@@ -43,7 +43,12 @@ An example of constructing a shrinkage network and training it with simulated da
  ```
  This would train a shrinkage network on simulated data with learning rate 0.001, 50 landmarks and save results to `/folder/to/save/to`. For other parameters not specified, it would use the default options. Likewise, the `blr.py` and `chi2_make_optimal.py` can be used in a similar fashion. It is also noted by default, it will parallise, unless specified otherwise.
  
- ## Reproducing the experiments
+ ## Reproducing the experiments (except BDR)
 There are 3 main experiments in the paper, namely _Varying bag size: Uncertainty in the inputs_, _Fixed bag size: Uncertainty in the regression model_ and _IMDb-WIKI: Age Estimation_. The experimental setup and the exact grid for each of these experiments can be found in `/experiment_config`. Note that the each network on the IMDb-WIKI dataset will take around 4 hours to train roughly (depending on the parameters) on four 2 - E5-2690 v4 @ 2.60GHz	CPUs.
 
 The `/results` folder contains the results of the models that performed best on the validation set for our experiments, each experiment results folder also contain corresponding notebooks for baseline or plotting purposes.
+
+ ## BDR: Reproducing the experiments 
+For the BDR algorithm, since it is a full MCMC algorithm, we will be making use of RStan instead of TensorFlow in python. 
+
+To reproduce the experiments on the gamma synthetic data, we need to first export the data manually, which is then accessed. This can be done by using `/utilities/export_toy_stan.py`, and turning on the necessary options.  
