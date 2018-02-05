@@ -17,7 +17,7 @@ The directory is organised as follows:
 
 There are two main datasets found in this paper:
 * __gamma synthetic data__: Simulated by `bdr/data/toy.py`, seed provided in `experiment_code`
-* __IMDb-WIKI__: The reprensentation in <img src="https://latex.codecogs.com/gif.latex?R^{4096}" />
+* __IMDb-WIKI__: The reprensentation in <img src="https://latex.codecogs.com/gif.latex?\mathbb{R}^{4096}" />
 
 
 
