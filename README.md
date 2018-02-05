@@ -32,8 +32,9 @@ The main API can be found in `/experiment_code`, where:
 * `train_test.py`: contains API code for RBF network, shrinkage, shrinkageC and also fourier features network.
 * `blr.py`: contains API code for bayesian linear regression.
 * `chi2_make_optimal.py`: contains API code for the Bayes-optimal for the varying bag size experiment.
+* `bdr-landmarks.R`: contains API code for the BDR MCMC algorithm, note that this is in _R_.
 
-All API make use of the `argparse` package, i.e. parameters can be specified in command line. To bring up the manual (and see the default options), run in command line:
+See __BDR: Reproducing the experiments__ below for the discussion of `bdr-landmarks.R` and how to use it. For the rest of the API, they make use of the `argparse` package , i.e. parameters can be specified in command line. To bring up the manual (and see the default options), run in command line:
 ```
 python train_test.py --help
 ```
