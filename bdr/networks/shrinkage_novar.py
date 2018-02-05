@@ -203,7 +203,8 @@ def build_shrinkage_novar_net(in_dim, landmarks, bw, reg_out,
         + reg_out * loss_weights
         + reg_out_bias * tf.nn.l2_loss(params['out_bias'])
     )
-
+    net.print_out_names = []
+    net.print_out = []
     if fixed_cov_matrix is None and opt_tau_sq:
         net.print_out_names.append("tau^2")
         net.print_out.append(tau_sq)

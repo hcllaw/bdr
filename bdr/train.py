@@ -56,7 +56,7 @@ def train_network(sess, net, train_f, val_f, checkpoint_path,
         val_sse += np.sum((preds - batch.y) ** 2)
     val_loss /= batch_i + 1
     val_mse = val_sse / len(val_f)
-    s += "val crit = {:8.5f}, MSE = {:8.5f}".format(val_loss, val_mse)
+    s += "estop crit = {:8.5f}, MSE = {:8.5f}".format(val_loss, val_mse)
     if hasattr(net, 'print_out'):
         s += "; " + ' '.join(
             '{:8.5f}'.format(x) for x in sess.run(net.print_out))
@@ -101,7 +101,7 @@ def train_network(sess, net, train_f, val_f, checkpoint_path,
 
         if epoch % display_every == 0:
             s = ("{: 4d}: mean train loss = {:8.5f}, MSE = {:8.5f}; "
-                 "val crit = {:8.5f}, MSE = {:8.5f}"
+                 "estop crit = {:8.5f}, MSE = {:8.5f}"
                  ).format(epoch, avg_loss, train_mse, val_loss, val_mse)
             if hasattr(net, 'print_out'):
                 s += "; " + ' '.join(
@@ -113,7 +113,7 @@ def train_network(sess, net, train_f, val_f, checkpoint_path,
 
     if epoch >= first_early_stop_epoch:
         print(("Stopping at epoch {} with val loss {:.8}\n"
-               "Using model from epoch {} with val loss {:.8}").format(
+               "Using model from epoch {} with estop loss {:.8}").format(
                    epoch, val_loss, best_epoch, cur_min))
         saver.restore(sess, save_path)
     else:

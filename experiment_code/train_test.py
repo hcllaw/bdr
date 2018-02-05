@@ -17,7 +17,7 @@ from sklearn.model_selection import ShuffleSplit, GroupShuffleSplit
 from sklearn.utils import check_random_state
 import tensorflow as tf
 
-# TO FIX LEON 
+from bdr import Features
 from bdr import networks
 from bdr.train import eval_network, train_network
 from bdr.utils import get_median_sqdist, tf_session
