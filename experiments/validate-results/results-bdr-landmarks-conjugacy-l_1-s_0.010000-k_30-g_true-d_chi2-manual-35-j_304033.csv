@@ -1,2 +1,0 @@
-"m","train.mse","validate.mse","train.r2","validate.r2","true.lengthscale","train.lp","validate.lp","l","k","s","d","g","S","RandKcorrected","SDtoVARcorrected","train.coverage95","validate.coverage95","train.coverage80","validate.coverage80","train.coverage50","validate.coverage50","iter","elapsed"
-"bdr-landmarks-conjugacy",1.05387745347325,0.973797946621945,0.450975570568783,0.527820902042764,1.63586957571538,-1.0985488413571,-1.06727277464317,1,30,0.01,"chi2-manual-35","true","false","agree with python","true",0.95,0.948,0.804,0.824,0.501,0.508,200,1507.232
