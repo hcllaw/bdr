@@ -10,10 +10,10 @@ python setup.py develop
 ```
 
 The directory is organised as follows:
-* bdr- contains the main code
-* experiment_code- contains the API code for all the networks
-* experiment config- contains the experimental setup/configurations described in the paper
-* results- contains the trained networks of the results described in the paper, and the corresponding plot functions.
+* __bdr__: contains the main code
+* __experiment_code__: contains the API code for all the networks
+* __experiment_config__: contains the experimental setup/configurations described in the paper
+* __results__: contains the trained networks of the results described in the paper, and the corresponding plot functions.
 
 
 
