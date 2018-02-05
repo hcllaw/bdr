@@ -13,7 +13,7 @@ The directory is organised as follows:
 * __bdr__: contains the main code, including data scripts
 * __experiment_code__: contains the API code for all the networks
 * __experiment_config__: contains the experimental setup/configurations described in the paper
-* __results__: contains the trained networks of the results described in the paper, and the corresponding plot functions.
+* __results__: contains the results of the experiments described in the paper, and the corresponding plot functions for them.
 
 ## Data
 There are two main datasets found in this paper:
@@ -39,7 +39,11 @@ python train_test.py --help
 ```
 An example of constructing a shrinkage network and training it with simulated data using `argparse` is shown here:
 ```
- python train_test.py chi2 -n shrinkage --learning-rate 0.001 --n-landmarks 50 --data-seed 23 /file/to/save/to
+ python train_test.py chi2 -n shrinkage --learning-rate 0.001 --n-landmarks 50 /folder/to/save/to
  ```
- This would train a shrinkage network on simulated data with learning rate 0.001, 50 landmarks, with data seed 23, while saving results to /file/to/save/to. For other parameters not specified, it would use the default options. 
+ This would train a shrinkage network on simulated data with learning rate 0.001, 50 landmarks and save results to `/folder/to/save/to`. For other parameters not specified, it would use the default options. Likewise, the `blr.py` and `chi2_make_optimal.py` can be used in a similar fashion. It is also noted by default, it will parallise, unless specified otherwise.
+ 
+ ## Reproducing the experiments
+There are 3 main experiments in the paper, namely _Varying bag size: Uncertainty in the inputs_, _Fixed bag size: Uncertainty in the regression model_ and _IMDb-WIKI: Age Estimation_. The experimental setup and the exact grid for each of these experiments can be found in `/experiment_config`. Note that the each network on the IMDb-WIKI dataset will take around 4 hours to train roughly (depending on the parameters) on four 2 - E5-2690 v4 @ 2.60GHz	CPUs.
 
+The `/results` folder contains the results of the models that performed best on the validation set for our experiments, each experiment results folder also contain corresponding notebooks for baseline or plotting purposes.
