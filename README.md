@@ -5,6 +5,7 @@ H. Law*, D. Sutherland*, D. Sejdinovic, S. Flaxman, __Bayesian Approaches to Dis
 
 \* denotes equal contribution
 
+## Setup
 To setup as a package, clone the repository and run
 ```
 python setup.py develop
