@@ -11,7 +11,6 @@ setup(
         'numpy',
         'scikit-learn',
         'six',
-        'tensorflow',
         'scipy',
         'tqdm',
         'glob',
