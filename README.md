@@ -1,5 +1,5 @@
 # bdr
-This package (tested on 2.7) implements the following paper: 
+Python code (tested on 2.7) for bayesian approaches to distribution regression, the details are described in the following paper: 
 
 H. Law*, D. Sutherland*, D. Sejdinovic, S. Flaxman, __Bayesian Approaches to Distribution Regression__, in _Artificial Intelligence and Statistics (AISTATS)_, 2018. [arxiv](https://arxiv.org/abs/1705.04293) 
 
