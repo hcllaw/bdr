@@ -14,7 +14,7 @@ setup(
         'scipy',
         'tqdm',
         'glob',
-#        'matplotlib',
+#        'matplotlib', if plot graphs 
 #        'sealion'
      ],
     description='Code for bayesian approaches to distribution regression.',
