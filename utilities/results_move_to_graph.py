@@ -32,14 +32,14 @@ def results_mover(filelocation, target_dest, tune_using = 'nll'): # Tune based o
 
 def main():
     files_dir = '/path/of/results/folder'
-    target_dir = '/path/of/destination//vary_bag' #'/data/ziz/hlaw/bdr/results_chi2/big'
+    target_dir = '/path/of/destination//vary_bag' 
     target_folder = os.path.join(target_dir, 'radial') # change accordingly... 
     tune_method = 'nll'
     if not os.path.exists(target_folder):
         os.makedirs(target_folder) 
 
-    for seed in range(23, 33):
-        print('moving seed {}'.format(seed))
+    for seed in range(23, 33): # for sbs in np.arange(0, 55, 5):
+        print('moving seed {}'.format(seed)) #print('moving bag size {}'.format(sbs))
         filename = os.path.join(files_dir, 'radial_seed_{}_varybag'.format(seed))
         location_name = os.path.join(target_folder, 'seed_{}.npz'.format(seed))
         print('Filename = {} \n location_name = {}'.format(filename, location_name))
