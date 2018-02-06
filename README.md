@@ -1,5 +1,5 @@
 # bdr
-This package implements the following paper: 
+This package (tested on 2.7) implements the following paper: 
 
 H. Law*, D. Sutherland*, D. Sejdinovic, S. Flaxman, __Bayesian Approaches to Distribution Regression__, in _Artificial Intelligence and Statistics (AISTATS)_, 2018. [arxiv](https://arxiv.org/abs/1705.04293) 
 
@@ -9,6 +9,7 @@ To setup as a package, clone the repository and run
 ```
 python setup.py develop
 ```
+This package also requires TensorFlow (tested on v1.4.1) to be installed.
 ## Structure
 The directory is organised as follows:
 * __bdr__: contains the main code, including data scripts
