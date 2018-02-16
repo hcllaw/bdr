@@ -8,7 +8,7 @@ sys.path.append('../experiment_code/') # change accordingly
 
 import numpy as np
 
-import train_test
+from train_test import generate_data, parse_args, pick_landmarks
 
 for seed in range(23, 33): # for minsize in np.arange(5,55,5):
     for dataset in ['chi2']: 
@@ -25,9 +25,9 @@ for seed in range(23, 33): # for minsize in np.arange(5,55,5):
                     '--data-seed', str(seed),
                     '--noise-std', str(1.0) # remove for vary_bag_size
                     ]
-        args = train_test.parse_args()
+        args = parse_args()
         print(args)
-        train, _, val, test = train_test.generate_data(args) # we dont use estop 
+        train, _, val, test = generate_data(args) # we dont use estop 
 
         def writecsv(x, y, fname):
             with open(fname + "_x.csv", "w") as f:
@@ -48,4 +48,4 @@ for seed in range(23, 33): # for minsize in np.arange(5,55,5):
         for n_landmarks in [30, 60, 90]:
             args.n_landmarks = n_landmarks
             np.savetxt(d('landmarks-{}.csv'.format(n_landmarks)),
-                       train_test.pick_landmarks(args, train))
+                       pick_landmarks(args, train))
