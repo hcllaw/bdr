@@ -30,7 +30,7 @@ for sbs_size in sbs:
         '/path/to/save/to',
         'shrink_chi2_size_{}'.format(sbs_size))
     command = [
-        'python', 'train_test.py',
+        'python', '../experiment_code/train_test.py',
         'chi2', # dataset 
         '-n', 'shrinkage',
         '--size-type','manual',

@@ -23,7 +23,7 @@ for seed_c in seeds:
             '/path/to/save/to',
             'shrinkage_face_seed_{}'.format(seed_c))
     command = [
-                "python", "train_test.py",
+                "python", "../experiment_code/train_test.py",
                 'imdb_faces',
                 "-n", "shrinkage", # Change to radial for RBF network
                 "--learning-rate", str(lr_c),

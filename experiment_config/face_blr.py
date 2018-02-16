@@ -24,7 +24,7 @@ for seed in seeds:
     # Save output and parameters to text file in the localhost node,
     # which is where the computation is performed.
     command = [
-        "python", os.path.join(dirname, "blr.py"),
+        "python", "../experiment_code/blr.py",
         'imdb_faces',
         "--type", "radial-precomp",
         "--learning-rate", str(lr_c),

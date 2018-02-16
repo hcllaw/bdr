@@ -27,7 +27,7 @@ for sbs_size in sbs:
         '/path/to/save/to',
         'blr_chi2_size_{}'.format(sbs_size))
     command = [
-        'python', 'blr.py',
+        'python', '../experiment_code/blr.py',
         'chi2', # dataset 
 		"--type", "radial",
 		"--size-type","manual",  # turn off if fixed bag size
