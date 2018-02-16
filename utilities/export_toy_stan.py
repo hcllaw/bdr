@@ -1,9 +1,10 @@
 # Export data for Stand for the BDR method... 
 # Vary bag size and fixed bag size, need to export landmarks too
-import csv
-from functools import partial
 import os
 import sys
+import csv
+from functools import partial
+sys.path.append('../experiment_code/') # change accordingly
 
 import numpy as np
 
@@ -13,7 +14,7 @@ for seed in range(23, 33): # for minsize in np.arange(5,55,5):
     for dataset in ['chi2']: 
         d = partial(
             os.path.join,
-            '/path/to/save/{}-seed-{}'.format(dataset, seed))
+            '../data/fix_size_{}_seed_{}'.format(dataset, seed))
         print "Exporting {} into {}".format(dataset, d())
         sys.argv = ['export_for_stan.py', dataset,
                     '--size-type', 'special',  # change to manual for vary_bag_size
@@ -23,7 +24,7 @@ for seed in range(23, 33): # for minsize in np.arange(5,55,5):
                     #'--kmeans-landmarks',
                     '--data-seed', str(seed),
                     '--noise-std', str(1.0) # remove for vary_bag_size
-                    ] + size_args
+                    ]
         args = train_test.parse_args()
         print(args)
         train, _, val, test = train_test.generate_data(args) # we dont use estop 
