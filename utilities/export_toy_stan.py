@@ -14,7 +14,7 @@ for seed in range(23, 33): # for minsize in np.arange(5,55,5):
     for dataset in ['chi2']: 
         d = partial(
             os.path.join,
-            '../stan_data/fix_size_{}_seed_{}'.format(dataset, seed))
+            '../stan_data/fix_size_{}_seed_{}'.format(dataset, seed)) #export to a stand data folder say
         print "Exporting {} into {}".format(dataset, d())
         sys.argv = ['export_for_stan.py', dataset,
                     '--size-type', 'special',  # change to manual for vary_bag_size
