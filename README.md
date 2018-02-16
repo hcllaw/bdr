@@ -55,4 +55,4 @@ The `/results` folder contains the results of the models that performed best on 
  ## BDR: Reproducing the experiments 
 For the BDR algorithm, since it is a full MCMC algorithm, we will be making use of RStan instead of TensorFlow in python. 
 
-To reproduce the experiments on the gamma synthetic data, we need to first export the data manually, which is then accessed. This can be done by using `/utilities/export_toy_stan.py`, and turning on the necessary options.  
+To reproduce the experiments on the gamma synthetic data, we need to first export the data manually, which is then accessed. This can be done by using `/utilities/export_toy_stan.py`, and turning on the necessary options. The data will be saved in a directory called `stan_data`, where each directory which contain csv files for the train, validation and test sets, as well a the corresponding landmarks.
