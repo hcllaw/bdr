@@ -23,7 +23,8 @@ for seed in range(23, 33): # for minsize in np.arange(5,55,5):
                     #'--max-size', str(50-minsize),
                     #'--kmeans-landmarks',
                     '--data-seed', str(seed),
-                    '--noise-std', str(1.0) # remove for vary_bag_size
+                    '--noise-std', str(1.0), # remove for vary_bag_size
+                    'out' # For fake file directory
                     ]
         args = parse_args()
         print(args)
